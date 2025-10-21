@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vienne Populaire 2026</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <h1>Vienne Populaire 2026</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="questionnaire.html">Questionnaire</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Construisons ensemble l'avenir de Vienne</h2>
+      <p>Une ville plus juste, écologique et solidaire</p>
+      <button class="cta-button" onclick="location.href='inscription.html'">Rejoignez-nous</button>
+    </div>
+  </section>
+
+  <!-- Programme Section -->
+  <section class="programme">
+    <div class="container">
+      <h3>Notre Programme</h3>
+      <div class="programme-grid">
+        <div class="programme-card">
+          <h4><i class="fas fa-university"></i> Démocratie Participative</h4>
+          <p>Mettre en place des conseils de quartier, des budgets participatifs et des consultations citoyennes régulières.</p>
+        </div>
+        <div class="programme-card">
+          <h4><i class="fas fa-leaf"></i> Transition Écologique</h4>
+          <p>Développer les énergies renouvelables, créer des espaces verts et promouvoir les mobilités douces.</p>
+        </div>
+        <div class="programme-card">
+          <h4><i class="fas fa-balance-scale"></i> Justice Sociale</h4>
+          <p>Lutter contre les inégalités, développer les services publics et soutenir les plus fragiles.</p>
+        </div>
+        <div class="programme-card">
+          <h4><i class="fas fa-lightbulb"></i> Innovation Citoyenne</h4>
+          <p>Encourager les initiatives locales, soutenir l’économie sociale et solidaire et la créativité.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Actualités Section -->
+  <section class="programme">
+    <div class="container">
+      <h3>Actualités</h3>
+      <div class="programme-grid">
+        <div class="programme-card">
+          <h4><i class="fas fa-calendar-alt"></i> Réunion publique</h4>
+          <p>Venez échanger avec nous le samedi 25 octobre à la salle des fêtes de Vienne.</p>
+        </div>
+        <div class="programme-card">
+          <h4><i class="fas fa-bullhorn"></i> Lancement du questionnaire</h4>
+          <p>Participez à notre enquête citoyenne pour construire le programme avec vous.</p>
+        </div>
+        <div class="programme-card">
+          <h4><i class="fas fa-hands-helping"></i> Appel aux bénévoles</h4>
+          <p>Rejoignez l’équipe Vienne POP pour préparer les actions de terrain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agenda Section -->
+  <section class="programme">
+    <div class="container">
+      <h3>Agenda</h3>
+      <div class="programme-grid">
+        <div class="programme-card">
+          <h4><i class="fas fa-users"></i> Réunion régulière d'action</h4>
+          <p>Des insoumis du pays viennois<br>
+          Jeudi 23 octobre 2025 de 19h00 à 20h00<br>
+          30 Avenue Général Leclerc, Espace Saint Germain, 38200 Vienne</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h3><i class="fas fa-phone"></i> Contactez-nous</h3>
+      <p class="contact-subtitle">Nous sommes à votre écoute pour répondre à toutes vos questions</p>
+
+      <div class="contact-container">
+        <!-- Informations de contact -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-clock"></i></div>
+            <div class="info-content">
+              <h4>Horaires</h4>
+              <p>Lun-Ven: 9h-12h / 14h-18h<br>Sam: 9h-12h</p>
+            </div>
+          </div>
+
+          <!-- Réseaux sociaux -->
+          <div class="social-links">
+            <h4>Suivez-nous sur les réseaux</h4>
+            <div class="social-icons">
+              <a href="https://www.youtube.com/@ViennePop" class="social-icon youtube" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="https://x.com/ViennePop2026" class="social-icon twitter" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://bsky.app/profile/viennepop2026.bsky.social" class="social-icon bluesky" target="_blank">
+                <i class="fas fa-cloud"></i>
+              </a>
+              <a href="https://www.facebook.com/profile.php/?id=615823296110904" class="social-icon facebook" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://mastodon.social/@ViennePop" class="social-icon mastodon" target="_blank">
+                <i class="fab fa-mastodon"></i>
+              </a>
+              <a href="mailto:viennepop2026@gmail.com" class="social-icon email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="contact-form">
+          <form id="contactForm" action="https://formspree.io/f/xnngywlk" method="POST" class="form">
+            <input type="hidden" name="_subject" value="Nouveau message contact - Vienne Pop 2026" />
+            <div class="form-group">
+              <label for="name">Nom complet *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Sujet *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choisissez un sujet</option>
+                <option value="information">Information</option>
+                <option value="adhesion">Adhésion</option>
+                <option value="evenement">Événement</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="probleme">Problème technique</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter">Je souhaite recevoir la newsletter</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer le message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
 
