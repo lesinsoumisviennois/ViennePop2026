@@ -1,1 +1,324 @@
 
+<!DOCTYPE html>
+<html lang="fr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposer une Idée - Vienne Pop 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Couleurs inspirées du style LFI/Populaire */
+        .lfi-bg-red { background-color: #CF0000; }
+        .lfi-text-red { color: #CF0000; }
+        .lfi-bg-purple { background-color: #893fff; }
+        .lfi-text-purple { color: #893fff; }
+        .lfi-border-red { border-color: #CF0000; }
+        .lfi-button {
+            background-color: #CF0000;
+            transition: background-color 0.3s ease;
+        }
+        .lfi-button:hover {
+            background-color: #B00000;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-label { display: block; font-weight: 500; color: #374151; margin-bottom: 0.5rem; }
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 0.375rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: #EF4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5);
+            outline: none;
+        }
+        .radio-group, .checkbox-group { margin-top: 0.5rem; }
+        .radio-group label, .checkbox-group label { margin-right: 1rem; display: inline-flex; align-items: center; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center py-10">
+    <div class="max-w-3xl w-full bg-white p-8 rounded-xl shadow-2xl">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2 lfi-text-red">Construisons Vienne ensemble</h1>
+            <p class="text-xl text-gray-700">💬 <strong>Partagez vos idées pour une ville plus juste, plus verte et plus vivante</strong></p>
+        </header>
+
+        <form action="https://formspree.io/f/xzzjybne" method="POST" class="space-y-8">
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 lfi-text-purple">1. Qui êtes-vous ?</h2>
+                <div class="form-group">
+                    <label class="form-label">1.1 Êtes-vous inscrit·e sur les listes électorales ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="electoral" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="electoral" value="Non" class="mr-2"> Non</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="age">1.2 Quel âge avez-vous ?</label>
+                    <input type="text" id="age" name="age" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="genre">1.3 Vous vous identifiez comme :</label>
+                    <select id="genre" name="genre" class="form-select">
+                        <option value="Femme">Femme</option>
+                        <option value="Homme">Homme</option>
+                        <option value="Autre">Autre</option>
+                        <option value="Ne pas répondre">Je préfère ne pas répondre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="rue">1.4 Dans quelle rue habitez-vous ?</label>
+                    <input type="text" id="rue" name="rue" class="form-input">
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 lfi-text-purple">2. Logement et solidarités</h2>
+                <div class="form-group">
+                    <label class="form-label">2.1 Vous êtes :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="statut" value="Propriétaire" class="mr-2"> Propriétaire</label>
+                        <label><input type="radio" name="statut" value="Locataire" class="mr-2"> Locataire</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">2.2 Comment décririez-vous votre logement ?</label>
+                    <div class="checkbox-group flex flex-wrap gap-4">
+                        <label><input type="checkbox" name="logement[]" value="En bon état" class="mr-2"> En bon état</label>
+                        <label><input type="checkbox" name="logement[]" value="Insalubre" class="mr-2"> Insalubre</label>
+                        <label><input type="checkbox" name="logement[]" value="Trop cher" class="mr-2"> Trop cher</label>
+                        <label><input type="checkbox" name="logement[]" value="Abordable" class="mr-2"> Abordable</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">2.3 Avez-vous déjà fait une demande de logement social ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="demande_logement" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="demande_logement" value="Non" class="mr-2"> Non</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">2.4 Souhaitez-vous que la mairie réquisitionne les logements vides ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="requisition" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="requisition" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="requisition" value="Sans avis" class="mr-2"> Sans avis</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">2.5 Souhaitez-vous que la mairie s’oppose aux expulsions sans solution de relogement ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="expulsions" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="expulsions" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="expulsions" value="Ne se prononce pas" class="mr-2"> Ne se prononce pas</label>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 lfi-text-purple">3. Culture</h2>
+                <div class="form-group">
+                    <label class="form-label">3.1 Fréquentez-vous les lieux culturels de Vienne ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="culture_freq" value="Souvent" class="mr-2"> Souvent</label>
+                        <label><input type="radio" name="culture_freq" value="De temps en temps" class="mr-2"> De temps en temps</label>
+                        <label><input type="radio" name="culture_freq" value="Rarement" class="mr-2"> Rarement</label>
+                        <label><input type="radio" name="culture_freq" value="Jamais" class="mr-2"> Jamais</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">3.2 Êtes-vous satisfait·e de l’offre culturelle actuelle ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="culture_satisfaction" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="culture_satisfaction" value="Non" class="mr-2"> Non</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">3.3 Et pour les enfants et les jeunes ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="culture_jeunes" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="culture_jeunes" value="Pas assez variée" class="mr-2"> Un peu, mais pas assez variée</label>
+                        <label><input type="radio" name="culture_jeunes" value="Non" class="mr-2"> Non, il en manque clairement</label>
+                        <label><input type="radio" name="culture_jeunes" value="Pas concerné·e" class="mr-2"> Je ne sais pas / pas concerné·e</label>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 lfi-text-purple">4. Commerces et services</h2>
+                <div class="form-group">
+                    <label class="form-label">4.1 Où faites-vous vos courses du quotidien ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="courses" value="Quartier" class="mr-2"> Dans votre quartier</label>
+                        <label><input type="radio" name="courses" value="Centre-ville" class="mr-2"> En centre-ville</label>
+                        <label><input type="radio" name="courses" value="Ailleurs" class="mr-2"> Ailleurs</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">4.2 Quels commerces vous manquent dans votre quartier ?</label>
+                    <div class="checkbox-group grid grid-cols-2 gap-2">
+                        <label><input type="checkbox" name="manque_commerces[]" value="Alimentation" class="mr-2"> Alimentation de proximité</label>
+                        <label><input type="checkbox" name="manque_commerces[]" value="Épiceries" class="mr-2"> Épiceries spécialisées</label>
+                        <label><input type="checkbox" name="manque_commerces[]" value="Prêt-à-porter" class="mr-2"> Prêt-à-porter</label>
+                        <label><input type="checkbox" name="manque_commerces[]" value="Maison" class="mr-2"> Maison et loisirs</label>
+                        <label><input type="checkbox" name="manque_commerces[]" value="Services" class="mr-2"> Services pratiques</label>
+                        <label><input type="checkbox" name="manque_commerces[]" value="Lieux conviviaux" class="mr-2"> Lieux conviviaux</label>
+                        <label><input type="checkbox" name="manque_commerces[]" value="Autre" class="mr-2"> Autre</label>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 lfi-text-purple">5. Vienne plus verte</h2>
+                <div class="form-group">
+                    <label class="form-label">5.1 Êtes-vous satisfait·e des espaces verts ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="espaces_verts" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="espaces_verts" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="espaces_verts" value="Ne sait pas" class="mr-2"> Ne sait pas</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">5.2 Quels espaces verts fréquentez-vous ?</label>
+                    <div class="checkbox-group grid grid-cols-2 gap-2">
+                        <label><input type="checkbox" name="espaces_frequentes[]" value="Quartier" class="mr-2"> Ceux de votre quartier</label>
+                        <label><input type="checkbox" name="espaces_frequentes[]" value="Jardin de ville" class="mr-2"> Jardin de ville</label>
+                        <label><input type="checkbox" name="espaces_frequentes[]" value="Cybèle" class="mr-2"> Jardin de Cybèle</label>
+                        <label><input type="checkbox" name="espaces_frequentes[]" value="Nature" class="mr-2"> Espaces naturels hors de la ville</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">5.3 Faut-il réduire la place de la voiture dans les quartiers résidentiels ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="voiture" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="voiture" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="voiture" value="Oui si alternatives" class="mr-2"> Oui, si des alternatives existent</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">5.4 Y a-t-il assez d’espaces sécurisés pour les vélos dans votre quartier ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="velos" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="velos" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="velos" value="Pas concerné·e" class="mr-2"> Pas concerné·e</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">5.5 Pour les futurs projets d’urbanisme, vous souhaiteriez :</label>
+                    <div class="checkbox-group grid grid-cols-2 gap-2">
+                        <label><input type="checkbox" name="urbanisme[]" value="Logements sociaux" class="mr-2"> Des logements sociaux</label>
+                        <label><input type="checkbox" name="urbanisme[]" value="Espaces verts" class="mr-2"> Des espaces verts</label>
+                        <label><input type="checkbox" name="urbanisme[]" value="Services publics" class="mr-2"> Des services publics</label>
+                        <label><input type="checkbox" name="urbanisme[]" value="Autre" class="mr-2"> Autre</label>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 lfi-text-purple">6. Transports et mobilités</h2>
+                <div class="form-group">
+                    <label class="form-label">6.1 Utilisez-vous les transports en commun à Vienne ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="transports_communs" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="transports_communs" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="transports_communs" value="Parfois" class="mr-2"> Parfois</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">6.2 Que faudrait-il améliorer selon vous ?</label>
+                    <div class="checkbox-group grid grid-cols-2 gap-2">
+                        <label><input type="checkbox" name="transports_ameliorations[]" value="Fréquence" class="mr-2"> Fréquence</label>
+                        <label><input type="checkbox" name="transports_ameliorations[]" value="Accessibilité" class="mr-2"> Accessibilité</label>
+                        <label><input type="checkbox" name="transports_ameliorations[]" value="Tarifs" class="mr-2"> Tarifs</label>
+                        <label><input type="checkbox" name="transports_ameliorations[]" value="Propreté" class="mr-2"> Propreté</label>
+                        <label><input type="checkbox" name="transports_ameliorations[]" value="Autre" class="mr-2"> Autre</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">6.3 Utilisez-vous un vélo ou une trottinette ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="mobilite_douce" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="mobilite_douce" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="mobilite_douce" value="Parfois" class="mr-2"> Parfois</label>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 lfi-text-purple">7. Démocratie locale</h2>
+                <div class="form-group">
+                    <label class="form-label">7.1 Participez-vous à la vie citoyenne locale ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="vie_locale" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="vie_locale" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="vie_locale" value="Parfois" class="mr-2"> Parfois</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">7.2 Souhaitez-vous plus de consultations citoyennes ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="consultations" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="consultations" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="consultations" value="Sans avis" class="mr-2"> Sans avis</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">7.3 Seriez-vous prêt·e à participer à des ateliers ou réunions publiques ?</label>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label><input type="radio" name="ateliers" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="ateliers" value="Non" class="mr-2"> Non</label>
+                        <label><input type="radio" name="ateliers" value="Peut-être" class="mr-2"> Peut-être</label>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-4 lfi-text-purple">8. Allons plus loin</h2>
+                <div class="form-group">
+                    <label class="form-label" for="commentaires">8.1 Quelles problématiques importantes n’ont pas été évoquées ?</label>
+                    <textarea id="commentaires" name="commentaires" rows="5" class="form-textarea"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">8.2 Souhaitez-vous être recontacté·e ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="contact_ok" value="Oui" class="mr-2"> Oui</label>
+                        <label><input type="radio" name="contact_ok" value="Non" class="mr-2"> Non</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contact">8.3 Votre contact (email ou téléphone) :</label>
+                    <input type="text" id="contact" name="contact" class="form-input">
+                </div>
+            </section>
+
+            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium lfi-button focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                Envoyer
+            </button>
+        </form>
+    </div>
+</body>
+</html>
