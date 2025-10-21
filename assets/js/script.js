@@ -182,4 +182,3 @@ function testResources() {
 }
 
 window.addEventListener('load', testResources);
-
