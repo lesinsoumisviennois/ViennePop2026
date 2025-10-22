@@ -1,1 +1,356 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: url('../img/vienne-bg.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-brand h1 {
+  color: #CF0000;
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: rgba(255,255,255,0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  color: #007BFF;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: #007BFF;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: white;
+  color: #CF0000;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Programme */
+.programme {
+  padding: 80px 0;
+  background: white;
+}
+
+.programme h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.programme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.programme-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  border-top: 4px solid #CF0000;
+}
+
+.programme-card:hover {
+  transform: translateY(-5px);
+}
+
+.programme-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #CF0000;
+}
+
+.programme-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #CF0000;
+}
+
+/* Contact */
+.contact {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.contact h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-icon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+  color: #ffd166;
+  width: 20px;
+}
+
+.info-content h4 {
+  margin-bottom: 0.5rem;
+  color: #ffd166;
+}
+
+.info-content p {
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Réseaux sociaux */
+.social-links {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links h4 {
+  margin-bottom: 1rem;
+  color: #ffd166;
+  text-align: center;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icon i {
+  font-size: 1.6rem;
+  color: white;
+}
+
+/* Formulaire */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background: #ffd166;
+  color: #333;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Animation clignotante + lien sonore */
+@keyframes clignote {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.clignotant {
+  animation: clignote 1.2s infinite;
+  color: #CF0000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.son-lien {
+  cursor: pointer;
+}
+
+/* Animation clic */
+.programme-card.clicked {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(207, 0, 0, 0.4);
+}
+
+/* ✅ Responsive smartphone */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+    margin-top: 80px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .programme-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .social-icons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .programme h3,
+  .contact h3 {
+    font-size: 2rem;
+  }
+}
 
