@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résultats du questionnaire</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <h1>Vienne Populaire 2026</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="questionnaire.html">Questionnaire</a></li>
+        <li><a href="resultats.html">Résultats</a></li>
+      </ul>
+    </nav>
+    <div class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <section class="resultats">
+    <div class="container">
+      <h2>🗳️ Résultats du questionnaire citoyen</h2>
+      <p class="resultats-intro">
+        Merci à toutes celles et ceux qui ont participé à notre enquête ! Voici les premières tendances exprimées par les Viennois·es :
+      </p>
+
+      <div class="resultats-grid">
+        <div class="resultats-card">
+          <h4><i class="fas fa-chart-bar"></i> Priorités exprimées</h4>
+          <ul>
+            <li>🌱 Transition écologique</li>
+            <li>🏥 Accès aux soins</li>
+            <li>🏫 Éducation et cantine gratuite</li>
+            <li>🗳️ Démocratie participative</li>
+          </ul>
+        </div>
+
+        <div class="resultats-card">
+          <h4><i class="fas fa-comments"></i> Vos propositions</h4>
+          <p>“Créer plus d’espaces verts” — “Mettre en place des conseils de quartier” — “Favoriser les coopératives locales”</p>
+        </div>
+
+        <div class="resultats-card">
+          <h4><i class="fas fa-lightbulb"></i> Ce que nous en retenons</h4>
+          <p>Ces résultats guideront nos engagements pour construire un programme fidèle aux attentes citoyennes.</p>
+        </div>
+      </div>
+
+      <div class="retour-questionnaire">
+        <a href="questionnaire.html" class="cta-button">Retour au questionnaire</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
 
