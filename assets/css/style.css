@@ -63,7 +63,6 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #CF0000, #FF6B6B);
   color: white;
   padding: 120px 0 80px;
   text-align: center;
@@ -73,11 +72,13 @@ body {
 .hero-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .cta-button {
@@ -96,13 +97,104 @@ body {
   transform: translateY(-2px);
 }
 
-/* Engagements Section */
-.engagements {
+/* Main Content Layout */
+.main-content {
   padding: 80px 0;
   background: #f8f9fa;
 }
 
-.engagements h3 {
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* News Sidebar */
+.news-sidebar {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.news-sidebar h3 {
+  color: #CF0000;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #CF0000;
+  padding-bottom: 0.5rem;
+}
+
+.news-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.news-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #CF0000;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.news-card:hover {
+  transform: translateY(-2px);
+}
+
+.news-badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: #CF0000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.news-card h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.news-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.date {
+  color: #CF0000;
+  font-weight: bold;
+}
+
+.read-more {
+  color: #CF0000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Engagements Column */
+.engagements-column h3 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
@@ -113,7 +205,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .engagement-block {
@@ -138,6 +229,7 @@ body {
 .engagement-block ul {
   list-style: none;
   padding-left: 0;
+  margin: 1rem 0;
 }
 
 .engagement-block li {
@@ -216,6 +308,15 @@ body {
   
   .hero-content h2 {
     font-size: 2rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .news-sidebar {
+    position: static;
   }
   
   .engagement-grid {
