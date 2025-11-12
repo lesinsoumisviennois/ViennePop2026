@@ -1,1 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vienne Populaire 2026</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <h1>VIENNE POPULAIRE 2026</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">ACCUEIL</a></li>
+        <li><a href="inscription.html">INSCRIPTION</a></li>
+        <li><a href="questionnaire.html">QUESTIONNAIRE</a></li>
+        <li><a href="resultats.html">RÉSULTATS</a></li>
+        <li><a href="chatbot.html">CHATBOT</a></li>
+      </ul>
+    </nav>
+    <div class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
 
+  <section class="hero" style="background: linear-gradient(rgba(207, 0, 0, 0.7), rgba(207, 0, 0, 0.5)), url('assets/images/vienne-bg.jpeg') center/cover;">
+    <div class="hero-content">
+      <h2>CONSTRUISONS ENSEMBLE L'AVENIR DE VIENNE</h2>
+      <p>UNE VILLE PLUS JUSTE, ÉCOLOGIQUE ET SOLIDAIRE</p>
+      <button class="cta-button" onclick="location.href='inscription.html'">REJOIGNEZ-NOUS</button>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <div class="container">
+      <div class="content-grid">
+        <!-- COLONNE GAUCHE - TWITTER LIVE -->
+        <aside class="news-sidebar">
+          <div class="live-news-widget">
+            <div class="live-header">
+              <span class="live-indicator"></span>
+              <h4>ACTUALITÉS EN DIRECT</h4>
+              <span class="twitter-handle">@ViennePop2026</span>
+            </div>
+            
+            <!-- Widget Twitter -->
+            <div class="twitter-container">
+              <div id="twitter-feed" class="twitter-feed">
+                <div class="twitter-loading">
+                  <i class="fab fa-twitter"></i>
+                  <p>Chargement des derniers tweets...</p>
+                </div>
+              </div>
+              
+              <!-- Fallback Twitter -->
+              <div class="twitter-fallback">
+                <div class="fallback-content">
+                  <i class="fab fa-twitter"></i>
+                  <h5>SUIVEZ-NOUS SUR TWITTER</h5>
+                  <p>Pour les dernières actualités en direct de Vienne Populaire 2026</p>
+                  <a href="https://twitter.com/ViennePop2026" target="_blank" class="fallback-button">
+                    <i class="fab fa-twitter"></i>
+                    VOIR NOTRE TWITTER
+                  </a>
+                  
+                  <div class="fallback-tweets">
+                    <div class="tweet-item">
+                      <div class="tweet-header">
+                        <span class="tweet-author">Vienne Populaire 2026</span>
+                        <span class="tweet-date">15 mars</span>
+                      </div>
+                      <p>Prochaine réunion publique le 25 mars - Échangeons sur l'avenir de Vienne</p>
+                    </div>
+                    
+                    <div class="tweet-item">
+                      <div class="tweet-header">
+                        <span class="tweet-author">Vienne Populaire 2026</span>
+                        <span class="tweet-date">14 mars</span>
+                      </div>
+                      <p>Campagne d'inscription électorale en cours - Ne perdez pas votre droit de vote !</p>
+                    </div>
+                    
+                    <div class="tweet-item">
+                      <div class="tweet-header">
+                        <span class="tweet-author">Vienne Populaire 2026</span>
+                        <span class="tweet-date">12 mars</span>
+                      </div>
+                      <p>Conseil de quartier ce week-end - Venez participer à la démocratie locale</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- COLONNE DROITE - ENGAGEMENTS ET AGENDA -->
+        <main class="right-column">
+          <!-- Section Engagements -->
+          <section class="engagements-section">
+            <h3>NOS ENGAGEMENTS</h3>
+            <div class="engagement-grid">
+              <div class="engagement-block red">
+                <h4>EN MARS, CHANGEZ VOTRE VILLE, CHANGEZ VOTRE VIE</h4>
+                <p style="text-align: justify;"><strong>Pourquoi s'inscrire pour les municipales 2026 ?</strong> Reprenons le pouvoir de choisir ceux qui dirigent notre commune.</p>
+                
+                <p style="text-align: justify;">Aujourd'hui plus que jamais, les décisions qui touchent notre quotidien se prennent près de chez nous. Les budgets municipaux, l'aménagement du territoire, la propreté des rues, la sécurité de proximité, l'éducation et les services publics locaux dépendent directement de ceux que nous élisons.</p>
+
+                <p style="text-align: justify;"><strong>Pourquoi s'inscrire maintenant :</strong></p>
+                <ul>
+                  <li>S'exprimer localement, c'est influencer le cadre de vie auquel vous participez chaque jour</li>
+                  <li>Les municipales définissent des priorités concrètes pour les prochaines années</li>
+                  <li>Les campagnes locales sont souvent plus accessibles</li>
+                  <li>Chaque voix compte dans de nombreuses communes</li>
+                </ul>
+
+                <p style="text-align: justify;"><strong>L'implication locale, pourquoi c'est crucial :</strong></p>
+                <ul>
+                  <li>Améliorer le quotidien par des décisions municipales concrètes</li>
+                  <li>Développer le sens de la communauté et la solidarité</li>
+                  <li>Préparer l'avenir des générations futures</li>
+                  <li>Contrôler la dépense publique pour plus de transparence</li>
+                </ul>
+
+                <p style="text-align: justify;">S'inscrire sur les listes électorales et s'impliquer localement, c'est donner du poids à votre voix et participer activement à la construction de la commune que vous souhaitez.</p>
+                <p class="signature">B.M.</p>
+              </div>
+
+              <div class="engagement-block yellow">
+                <h4>PLANIFICATION ÉCOLOGIQUE</h4>
+                <p style="text-align: justify;">La satisfaction des besoins associée à l'application de la règle verte sera le fondement de notre politique.</p>
+                
+                <p style="text-align: justify;">Ne pas prendre aux écosystèmes plus de ressources qu'ils ne peuvent en reconstituer, protéger la biodiversité, garantir un accès à une alimentation saine, répertorier les risques écologiques et en prévenir les conséquences…</p>
+                
+                <p style="text-align: justify;">La population définira ses besoins et ses priorités pour établir un plan. La municipalité élaborera, coordonnera et financera ce plan en s'appuyant au maximum sur des ressources locales.</p>
+                
+                <p style="text-align: justify;">La gestion de l'eau par une régie publique permettra la gratuité des premiers mètres cubes, puis une tarification progressive.</p>
+                
+                <p style="text-align: justify;">Nous favoriserons la pose de panneaux solaires, la création d'une régie municipale agricole, et la gratuité des cantines.</p>
+                
+                <p style="text-align: justify;">La lutte contre le changement climatique est une lutte des classes. Nous formerons la population aux premiers secours et à l'entraide.</p>
+                
+                <p style="text-align: justify;">Nous développerons les ressourceries, les ateliers de réparation, et le partage d'appareils.</p>
+                
+                <p style="text-align: justify;">La renaturation des sols, la création d'espaces verts et de haies seront des urgences. Notre écologie sera populaire.</p>
+                <p class="signature">T.M.</p>
+              </div>
+              
+              <div class="engagement-block blue">
+                <h4>TRANSFORMATION ÉCONOMIQUE</h4>
+                <p style="text-align: justify;"><strong>Défendre le petit commerce face aux géants de la grande distribution</strong></p>
+
+                <p style="text-align: justify;">Ce programme est justifié par le constat que, dans de nombreuses communes françaises, le nombre de locaux commerciaux vacants est important, tandis que les enseignes indépendantes sont souvent remplacées par des chaînes.</p>
+
+                <p style="text-align: justify;"><strong>Justification et Rôle du Petit Commerce :</strong></p>
+                <p style="text-align: justify;">Une politique en faveur du petit commerce indépendant se justifie par l'intérêt général. Le petit commerce joue un rôle essentiel dans la vie locale :</p>
+                <ul>
+                  <li><strong>Emploi :</strong> Les petits commerces sont pourvoyeurs de plus d'emplois</li>
+                  <li><strong>Lien Social :</strong> Ils participent activement au lien social et à la vie des communes</li>
+                </ul>
+
+                <p style="text-align: justify;"><strong>Mesures Proposées :</strong></p>
+                
+                <p style="text-align: justify;"><strong>1. Restriction de la Grande Distribution :</strong></p>
+                <ul>
+                  <li>Refuser les permis de construire pour nouvelles grandes surfaces</li>
+                  <li>Modifier le plan local d'urbanisme (PLU)</li>
+                  <li>Modifier le schéma de cohérence territoriale (SCOT)</li>
+                </ul>
+
+                <p style="text-align: justify;"><strong>2. Soutien Direct et Fiscalité :</strong></p>
+                <ul>
+                  <li>Aide à l'installation par mise à disposition de locaux</li>
+                  <li>Utilisation du droit de préemption municipal</li>
+                  <li>Modulation de la taxe foncière pour promouvoir les commerces de proximité</li>
+                </ul>
+
+                <p style="text-align: justify;"><strong>3. Promotion des Circuits Courts :</strong></p>
+                <ul>
+                  <li>Création et promotion des marchés locaux</li>
+                  <li>Travail avec les forains et création de postes de régisseurs de marché</li>
+                </ul>
+              </div>
+              
+              <div class="engagement-block purple">
+                <h4>RENOUVEAU DÉMOCRATIQUE</h4>
+                <p style="text-align: justify;">Nous voulons redonner du pouvoir aux habitant·es de Vienne. La démocratie ne doit pas se limiter à un vote tous les six ans.</p>
+                
+                <p style="text-align: justify;">Nous mettrons en place des conseils de quartier dotés de budgets participatifs, ouverts à toutes et tous. Ces conseils seront des lieux de débat, de décision et d'action locale.</p>
+                
+                <p style="text-align: justify;">Une assemblée citoyenne sera constituée par tirage au sort, renouvelée régulièrement, et associée aux grandes orientations de la ville.</p>
+                
+                <p style="text-align: justify;">Nous instaurerons un droit d'interpellation citoyenne, permettant à un groupe d'habitant·es de poser une question au conseil municipal et d'obtenir une réponse publique.</p>
+                
+                <p style="text-align: justify;">Les élu·es devront rendre compte régulièrement de leur mandat devant les habitant·es. Un droit de révocation sera instauré en cas de manquement grave.</p>
+                
+                <p style="text-align: justify;">La transparence des décisions, l'accès aux données publiques et la lutte contre les conflits d'intérêts seront des priorités.</p>
+                
+                <p style="text-align: justify;">Nous voulons une démocratie vivante, populaire et exigeante.</p>
+                <p class="signature">T.M.</p>
+              </div>
+              
+              <div class="engagement-block red">
+                <h4>VIENNE PLUS HUMAINE</h4>
+                <p style="text-align: justify;"><strong>Nouvelle France, nouvelle Vienne</strong></p>
+                <p style="text-align: justify;">Vienne, de part son histoire ouvrière, est une ville brassée par les migrations. De plus, depuis la crise sanitaire du Covid de nouveaux habitant•es ont choisi de venir vivre dans notre cité pour ses atouts (conditions de vie, éducation, culture, nature...).</p>
+                <p style="text-align: justify;">C'est une nouvelle ville qui est entrain d'advenir et que nous devons construire ensemble pour que chacun•e s'y sente bien quelque soit ses origines, son genre, sa classe sociale, son état de santé.</p>
+                
+                <p style="text-align: justify;"><strong>Lutte contre les discriminations :</strong></p>
+                <ul>
+                  <li>Observatoire communal des discriminations</li>
+                  <li>Lieux d'accueil d'urgence pour femmes victimes de violence</li>
+                  <li>Permanence juridique gratuite</li>
+                </ul>
+                
+                <p style="text-align: justify;"><strong>Une ville inclusive :</strong></p>
+                <ul>
+                  <li>Marches exploratoires sous le prisme du genre</li>
+                  <li>Objectif zéro lieu inaccessible</li>
+                  <li>Environnement urbain pensé pour tous</li>
+                </ul>
+                <p class="signature">T.M.</p>
+              </div>
+              
+              <div class="engagement-block green">
+                <h4>ENTRAIDE ET SOLIDARITÉ</h4>
+                <p style="text-align: justify;">La politique que nous voulons instaurer pour notre ville est une politique qui part des besoins. Les besoins essentiels, se nourrir, s'hydrater, se soigner se loger, se chauffer, se rafraîchir, s'éduquer, se cultiver doivent être garantis.</p>
+                <p style="text-align: justify;">Elle repose sur l'entraide pour offrir un contre modèle à la concurrence de tou•tes contre tou•tes imposer par le néolibéralisme.</p>
+                
+                <p style="text-align: justify;"><strong>Logement :</strong></p>
+                <ul>
+                  <li>Droit à un logement digne</li>
+                  <li>Encadrement des loyers</li>
+                  <li>Droit de préemption pour le logement social</li>
+                </ul>
+                
+                <p style="text-align: justify;"><strong>Une ville agréable à tous les âges :</strong></p>
+                <ul>
+                  <li>Soutien aux crèches publiques</li>
+                  <li>Réseau "villes amies des enfants"</li>
+                  <li>Classes transplantées (verte, mer, neige)</li>
+                  <li>Contrats locaux de santé</li>
+                  <li>Lien inter-générationnel renforcé</li>
+                </ul>
+                
+                <p style="text-align: justify;"><strong>Le droit à la sûreté :</strong></p>
+                <ul>
+                  <li>Police municipale de proximité</li>
+                  <li>Prévention et médiation</li>
+                  <li>Moratoire sur la vidéosurveillance</li>
+                </ul>
+                <p class="signature">T.M.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section Agenda -->
+          <section class="agenda-section">
+            <h3>AGENDA</h3>
+            <div class="agenda-container">
+              <div class="agenda-item">
+                <div class="agenda-date">
+                  <span class="agenda-day">25</span>
+                  <span class="agenda-month">MARS</span>
+                </div>
+                <div class="agenda-content">
+                  <h4>RÉUNION PUBLIQUE</h4>
+                  <p>Projet de végétalisation des cours d'école</p>
+                  <span class="agenda-location">Mairie du centre - 18h30</span>
+                </div>
+              </div>
+
+              <div class="agenda-item">
+                <div class="agenda-date">
+                  <span class="agenda-day">30</span>
+                  <span class="agenda-month">MARS</span>
+                </div>
+                <div class="agenda-content">
+                  <h4>CONSEIL DE QUARTIER</h4>
+                  <p>Centre-ville - Budget participatif</p>
+                  <span class="agenda-location">Salle des fêtes - 19h00</span>
+                </div>
+              </div>
+
+              <div class="agenda-item">
+                <div class="agenda-date">
+                  <span class="agenda-day">05</span>
+                  <span class="agenda-month">AVR</span>
+                </div>
+                <div class="agenda-content">
+                  <h4>FORUM ASSOCIATIF</h4>
+                  <p>Rencontre avec les associations locales</p>
+                  <span class="agenda-location">Place de la Libération - 14h00</span>
+                </div>
+              </div>
+
+              <div class="agenda-item">
+                <div class="agenda-date">
+                  <span class="agenda-day">12</span>
+                  <span class="agenda-month">AVR</span>
+                </div>
+                <div class="agenda-content">
+                  <h4>CONFÉRENCE ÉCOLOGIE</h4>
+                  <p>Plan climat de Vienne</p>
+                  <span class="agenda-location">Bibliothèque municipale - 17h00</span>
+                </div>
+              </div>
+
+              <div class="agenda-item">
+                <div class="agenda-date">
+                  <span class="agenda-day">20</span>
+                  <span class="agenda-month">AVR</span>
+                </div>
+                <div class="agenda-content">
+                  <h4>PORTES OUVERTES</h4>
+                  <p>Présentation du programme complet</p>
+                  <span class="agenda-location">Siège de campagne - 10h-18h</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="agenda-newsletter">
+              <h4>NE MANQUEZ AUCUN ÉVÉNEMENT</h4>
+              <p>Inscrivez-vous à notre newsletter</p>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Votre email" class="newsletter-input">
+                <button class="newsletter-button">S'INSCRIRE</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <h4 style="color: #CF0000; margin-bottom: 1rem;">SUIVEZ-NOUS</h4>
+      <div class="social-icons" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+        <a href="https://facebook.com/ViennePop2026" target="_blank" style="color: #CF0000; font-size: 1.5rem;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/ViennePop2026" target="_blank" style="color: #CF0000; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/ViennePop2026" target="_blank" style="color: #CF0000; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com/@ViennePop2026" target="_blank" style="color: #CF0000; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p style="font-size: 0.9rem; color: #666;">© 2025 – Site développé par MouradB</p>
+    </div>
+  </footer>
+
+  <!-- Script Twitter -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+  <script src="assets/js/script.js"></script>
+  
+  <!-- Script de fallback Twitter -->
+  <script>
+  setTimeout(function() {
+    const twitterIframe = document.querySelector('.twitter-timeline iframe');
+    const fallback = document.querySelector('.twitter-fallback');
+    
+    if (!twitterIframe && fallback) {
+      fallback.style.display = 'block';
+    }
+  }, 5000);
+  </script>
+</body>
+</html>
